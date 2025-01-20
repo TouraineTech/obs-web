@@ -1,5 +1,7 @@
 <script>
   /* eslint-env browser */
+  import FullScreenProjector from './FullScreenProjector.svelte'
+
   const OBS_WEBSOCKET_LATEST_VERSION = '5.0.1' // https://api.github.com/repos/Palakis/obs-websocket/releases/latest
 
   // Imports
@@ -548,6 +550,7 @@
         buttonStyle={isIconMode ? 'icon' : 'text'}
         {editable}
       />
+      <FullScreenProjector/>
       {#if !isSceneOnTop}
         <ProgramPreview {imageFormat} />
       {/if}
